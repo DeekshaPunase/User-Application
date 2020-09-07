@@ -9,7 +9,7 @@ All data is encrypted and decrypted using AES algorithm for data transmission (s
 
 User can select two type for storing files either CSV or XML. The request files are stored at a particular location in your system.
 
-Path for CSV : "D:\UserFiles\CSV\user_1.csv" &&  
+Path for CSV : "D:\UserFiles\CSV\user_1.csv"  
 Path for XML : "D:\UserFiles\XML\user_1.xml"
 
 Directory will be automatically created based on fileType once the /store url is run based on your fileType param.
