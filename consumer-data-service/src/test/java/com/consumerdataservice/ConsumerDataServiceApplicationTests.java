@@ -2,7 +2,6 @@ package com.consumerdataservice;
 
 import static org.junit.Assert.assertEquals;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import java.math.BigDecimal;
 
@@ -20,13 +19,14 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
+import com.consumerdataservice.controller.ConsumerController;
 import com.consumerdataservice.dto.UserDto;
 import com.consumerdataservice.service.ConsumerDataSaveAndUpdate;
 import com.consumerdataservice.util.DecryptionAESConfig;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes= {ConsumerDataServiceApplication.class})
+@SpringBootTest(classes= {ConsumerController.class})
 @AutoConfigureMockMvc
 public class ConsumerDataServiceApplicationTests {
 
