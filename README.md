@@ -6,9 +6,11 @@ Only for Read operations http mode is used.
 A queue named user-data-queue is used which will be transferring the data. (ActiveMq JMS)
 All data is encrypted and decrypted using AES algorithm for data transmission (save, update and read).
 
-User can select two type for storing files either CSV or XML. The request files are stored at a particular location in your system 
+User can select two type for storing files either CSV or XML. The request files are stored at a particular location in your system.
+
 Path for CSV : "D:\UserFiles\CSV\user_1.csv"
 Path for XML : "D:\UserFiles\XML\user_1.xml"
+
 Directory will be automatically created based on fileType once the /store url is run based on your fileType param.
 File will be saved as User_<userId>.csv/xml. 
 Multiple user details can be passed from interface service, each user file will be created separately as Unserid is unique. And user details are saved to database with userId and fileUrl (FILE LOCATION) so that for read and update opertions the saved file can be fetched and we can perform the required operation.
