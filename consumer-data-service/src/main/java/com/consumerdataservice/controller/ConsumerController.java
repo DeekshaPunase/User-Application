@@ -15,7 +15,6 @@ import com.consumerdataservice.util.DecryptionAESConfig;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-
 @RestController
 @RequestMapping("/getUserDetails")
 public class ConsumerController {
