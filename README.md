@@ -3,12 +3,13 @@
 Application contains two Spring Boot Microservices : Consumer-interface-service and Consumer-data-service. Consumer-interface-service acts as a interface for all users. Request are taken at consumer-interace-service and then sent over to other consumer-data-service for saving, updating, fetching of user specific data. 
 Communication between microservice is done through Message Driven concept where a queue is mainatined and the services read data from the queue. (NO http or HTTPS) 
 Only for Read operations http mode is used.
-A queue named user-data-queue is used which will be transferring the data. (ActiveMq JMS)
+A queue named user-data-queue is used which will be transferring the data. (ActiveMq JMS).
+
 All data is encrypted and decrypted using AES algorithm for data transmission (save, update and read).
 
 User can select two type for storing files either CSV or XML. The request files are stored at a particular location in your system.
 
-Path for CSV : "D:\UserFiles\CSV\user_1.csv"
+Path for CSV : "D:\UserFiles\CSV\user_1.csv" &&  
 Path for XML : "D:\UserFiles\XML\user_1.xml"
 
 Directory will be automatically created based on fileType once the /store url is run based on your fileType param.
@@ -20,7 +21,7 @@ FileType is required for both save and update.
 Read operation is independent of filetype. If file present in system as CSV then it will read data from CSV and if present as XML then it will read data from XML and send back to consumer-interface-service.
 
 Requirments to run service:
-Download ActiveMq for queue data handle. (id: admin, password:admin) for login. Go to bin folder then start activemq batch file to run the queue locally.
+Download ActiveMq for queue data handle. (id: admin, password:admin) for login. Unzip and Go to bin folder then start activemq batch file to run the queue locally.
 
 Database used:
 h2 db
