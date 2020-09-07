@@ -22,6 +22,7 @@ Read operation is independent of filetype. If file present in system as CSV then
 
 Requirments to run service:
 Download ActiveMq for queue data handle. (id: admin, password:admin) for login. Unzip and Go to bin folder then start activemq batch file to run the queue locally.
+Open browser on http://127.0.0.1:8161/ for accessing queue.
 
 Database used:
 h2 db
