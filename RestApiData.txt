@@ -1,0 +1,37 @@
+Store : 
+Post method
+http://localhost:8081/user/details/store?fileType=XML
+
+Request body 
+[
+    {
+        "userId": 1,
+        "firstName": "Deeksha,
+        "age": 26,
+        "lastName": "Punase",
+        "salary": 100,
+        "dob": "2020-09-06T17:37:30.622"
+    },
+    {
+        "userId": 2,
+        "firstName": "Vishal",
+        "age": 27,
+        "lastName": "Ray",
+        "salary": 100
+    }
+]
+
+Update : 
+Put method
+http://localhost:8081/user/details/update?fileType=XML
+
+Request Body : userId with other details to be updated
+[
+    {
+        "userId": 1,
+        "firstName": "DeekshaPunase"
+    }
+]
+
+Get : 
+http://localhost:8081/user/details/getUserDetails/{userId}
