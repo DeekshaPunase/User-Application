@@ -13,9 +13,9 @@ import org.springframework.jms.core.JmsTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import com.consumerinterface.dto.UserDetailsDto;
+import com.consumerinterface.dto.UserDto;
 import com.consumerinterface.util.EncryptionAESConfig;
-import com.consumerinterface.util.UserDetailsDto;
-import com.consumerinterface.util.UserDto;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;

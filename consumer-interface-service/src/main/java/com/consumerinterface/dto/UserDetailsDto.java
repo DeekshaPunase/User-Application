@@ -1,4 +1,4 @@
-package com.consumerinterface.util;
+package com.consumerinterface.dto;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -22,9 +22,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.consumerinterface.dto.UserDto;
 import com.consumerinterface.service.ConsumerInterfaceService;
 import com.consumerinterface.util.ConsumerInterfaceException;
-import com.consumerinterface.util.UserDto;
 
 @RestController
 @RequestMapping("/user/details")
@@ -69,12 +69,12 @@ public class ConsumerInterfaceController {
 	}
 
 	@PutMapping(value = "/update")
-	public String updateUserData(@RequestBody List<UserDto> userDto,
-			@RequestParam(value = "fileType") String fileType) {
+	public ResponseEntity<String> updateUserData(@RequestBody List<UserDto> userDto,
+			@RequestParam(value = "fileType",required=true) String fileType) {
 
 		String msg = service.updateUserData(userDto, fileType);
 
-		return msg;
+		return new ResponseEntity<>(msg, HttpStatus.OK);
 	}
 
 	@ExceptionHandler(value = ConsumerInterfaceException.class)
